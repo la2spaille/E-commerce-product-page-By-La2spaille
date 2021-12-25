@@ -1,0 +1,20 @@
+button {
+    @extend %flexXalign-item-center;
+    @extend %border-radius;
+    justify-content: center;
+    margin:  0 0 0 15px;
+    padding: 15px 0;
+    background: $Orange;
+    color: $White;
+    line-height: 0;
+    flex: 1;
+    cursor: pointer;
+    // box-shadow: 0 10px 10px $White;
+    &:hover {
+        opacity: .5;
+        box-shadow: 0 25px 50px $PaleOrange;
+    }
+    svg {
+        padding: 0 10px 0 0;
+    }
+}

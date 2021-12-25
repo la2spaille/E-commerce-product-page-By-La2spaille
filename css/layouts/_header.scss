@@ -1,0 +1,201 @@
+header {
+    @extend %flexXalign-item-center;
+    justify-content: space-between;
+    height: 110px;
+    width: 100%;
+    position: relative;
+    background: #fff;
+    &::after {
+        content: '';
+        display: block;
+        height: 1.5px;
+        width: calc(100% - 340px);
+        position: absolute;
+        bottom: 0;
+        left: 170px;
+        background: $GrayishBlue;
+        visibility: visible;
+    }
+}
+.w-logo {
+    padding: 0 30px 0 170px;
+}
+.w-header-nav {
+    height: 100%;
+    padding: 0 30px;
+    flex: 1;
+    nav {
+        display: flex;
+        height: 100%;
+        a {
+            @extend %flexXalign-item-center;
+            height: 100%;
+            padding: 0 15px;
+            &:first-child {
+                margin: 0 0 0 -15px;
+            }
+            span {
+                @extend %flexXalign-item-center;
+                height: 100%;
+                position: relative;
+                font-weight: 400;
+                font-size: $FontSizeParagraph;
+                color: $DarkGrayishBlue;
+                &:hover {
+                    color: $VeryVarkBlue;
+                }
+                &:hover::after {
+                    content: '';
+                    display: block;
+                    height: 4px;
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    background: $Orange;
+                }
+            }
+        }
+    }
+}
+.w-header-nav--fake,#i-header-nav-close {
+    display: none;
+}
+.w-basketXaccount {
+    @extend %flexXalign-item-center;
+    justify-content: space-between;
+    padding: 0 170px 0 0;
+    position: relative;
+}
+.w-basket,.w-account,#i-menu {
+    @extend %flexXalign-item-center;
+    justify-content: center;
+}
+.w-basket {
+    position: relative;
+}
+#basket-pill {
+    @extend %border-radius;
+    padding: 2px 7.5px;
+    position: absolute;
+    top: -29%;
+    right: -31%;
+    color:$White;
+    font-size: 8px;
+    background: $Orange;
+    visibility: hidden;
+    &.is-active {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+.w-mini-cart {
+    @extend %border-radius;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    padding: 20px 0 30px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: 3;
+    background: $White;
+    transform: translateX(calc(-50% + 10px));
+    box-shadow:  10px 10px 10px $LightGrayishBlue, -10px 10px 10px $LightGrayishBlue;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    &.is-active {
+        opacity: 1;
+        visibility: visible;
+    }
+    > h3 {
+        padding: 0 15px 20px;
+        border-bottom: 1px solid $GrayishBlue;
+        font-size: 16px;
+    }
+    button {
+        width: calc(100% - 40px);
+        margin: 20px 20px 0;
+    }
+}
+.w-mini-cart-sumaryXbtn {
+    position: relative;
+}
+.w-mini-cart--is-empty {
+    @extend %flexXalign-item-center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 10px 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: white;
+    opacity: 1;
+    visibility: hidden;
+    &.true {
+        visibility: visible;
+    }
+    &.is-no-empty {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+.w-mini-cart-product-sumary {
+    @extend %flexXalign-item-center;
+    height: 50px;
+    padding:  20px 20px 0;
+    flex: 1;
+}
+.w-mini-cart-product-thumbnail {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    img {
+        height: auto;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 7.5px;
+    }
+}
+.w-mini-cart-product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 5px);
+    padding: 2.5px 15px;
+    flex: 1;
+    color: $DarkGrayishBlue;
+    font-size: 16px;
+    > div {
+        display: flex;
+    }
+}
+.mini-cart-product-qte,.mini-cart-product-pt {
+    padding: 0 0 0 10px;
+}
+.mini-cart-product-pt {
+    color: $Black;
+    font-weight: 700;
+    span {
+        font-weight: 700;
+    }
+}
+.w-account {
+    padding: 0 0 0 30px;
+    img {
+        border: 2px solid transparent;
+        border-radius: 50%;
+        cursor: pointer;
+        &:hover {
+            border-color: $Orange;
+        }
+    }
+}
+#i-menu {
+    display: none;
+}

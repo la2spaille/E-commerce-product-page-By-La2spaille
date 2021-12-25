@@ -1,0 +1,238 @@
+#l-lightbox {
+    @extend %flexXalign-item-center;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100% - 180px);
+    width: calc(100vw - 65%);
+    padding: 90px 32.5% ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background: rgba($Black, 0.75);
+    opacity: 0;
+    visibility: hidden;
+    &.is-active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .previous {
+        left: 0;
+        transform: translateX(-50%);
+    }
+    .next {
+        right: 0;
+        transform: translateX(50%);
+    }
+}
+
+.w-img-grid.w-img-grid-lightbox {
+    min-width: calc(100% - 60px);
+    margin: 15px 0 0;
+    padding: 0 30px;
+    gap: 90px 30px;
+    .w-primary-img{
+        width: calc( 100% + 60px);
+        margin: 0 -30px ;
+        padding: 0 0 calc(100% + 60px);
+        position: relative;
+        #img-primary-lightbox {
+            height: 100%;
+            width: 100%; 
+        }
+        .w-img-nav {
+            display: flex;
+        }
+    }
+    .w-thumbnail {
+        @extend %border-radius;
+        width: 100%;
+        padding: 0 0 100%;
+        &::after {
+            content: '';
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #fff;
+        }
+        img {
+            height: 100%;
+            z-index: 2;
+        }
+        
+    }
+}
+.w-lightbox-close {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    i {
+        justify-content: flex-end;
+        height: 50px;
+        width: 50px;
+        fill: $White;
+        &:hover {
+            svg {
+                fill: $Orange;
+            }
+        }
+    }
+}
+.w-img-nav {
+    display: none;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+    border-radius: 50%;
+    background: $White;
+    transform: translateY(-50%);
+    cursor: pointer;
+    i {
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        &:hover {
+            svg {
+                stroke: $Orange;
+            }
+        }
+    }
+    svg {
+        stroke: #1D2026;
+    }
+        
+}
+.w-img-grid {
+    @extend %border-radius;
+    display: grid;
+    grid-template: auto auto / 1fr 1fr 1fr 1fr;
+    gap: 30px 30px;
+    min-width: calc(50% - 50px);
+    max-width: 50%;
+    padding: 0 50px 0 0;
+    position: relative;
+}
+#img-primary {
+    cursor: pointer;
+}
+.w-primary-img{
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+    width: 100%;
+    padding: 0 0 100%;
+    position: relative;
+    img {
+        @extend %border-radius;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+}
+.w-thumbnail {
+    @extend %border-radius;
+    width: 100%;
+    padding: 0 0 100%;
+    position: relative;
+    border: 2px solid transparent ;
+    overflow: hidden;
+    &.is-active {
+        border-color:  $Orange ; /* Urgent*/
+        img {
+            opacity: 0.3;
+        }
+    }
+    img {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        transform: scale(1.15);
+        &:hover {
+            opacity: 0.3;
+        }
+    }
+    
+}
+.w-product-info {
+    padding: 30px 10px 0 70px;
+    strong {
+        color: $Orange;
+    }
+}
+.product-tilte {
+    padding: 15px 0 0;
+}
+.product-description {
+    padding: 30px 0 0;
+    color: $GrayishBlue;
+}
+.w-product-priceXsolde {
+    @extend %flexXalign-item-center;
+    width: 0%;
+    justify-content: space-between;
+    padding: 15px 0 0;
+}
+.w-product-price {
+    padding: 5px 0;
+    font-weight: 700;
+    font-size: 24px;
+}
+.w-product-solde {
+    margin: 0 10px;
+    padding: 2.5px 7.5px;
+    border-radius: 5px;
+    background: $PaleOrange;
+    color: $Orange;
+}
+.w-product-price--line-through {
+    padding: 5px 0 0;
+    color: $GrayishBlue;
+    text-decoration: line-through;
+}
+.w-add-to-cart-inputXbtn {
+    @extend %flexXalign-item-center;
+    justify-content: space-between;
+    padding: 20px 0 0;
+    position: relative; 
+}
+.w-add-to-cart-input {
+    @extend %flexXalign-item-center;
+    @extend %border-radius;
+    min-height: 100%;
+    padding: 15px 15px;
+    justify-content: space-between;
+    position: relative;
+    background: $LightGrayishBlue;
+    svg {
+        fill: $Orange;
+    }
+    div {
+        @extend %flexXalign-item-center;
+    }
+    i {
+        svg{fill: $Black;}
+        &:hover {
+            color: $Orange;
+            svg {
+                fill: $Orange;
+            }
+        }
+    }
+}
+.minus {
+    @extend %flexXalign-item-center;
+    color: $Black;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 100%;
+}
+#AddPanierMulti {
+    margin: 0 30px ;
+}

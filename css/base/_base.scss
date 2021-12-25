@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    vertical-align: baseline;
+    text-decoration: none;
+    text-transform: none;
+    font-family: 'Kumbh Sans' , sans-serif;
+    transition: 0.25s;
+    list-style: none;
+    color: inherit;
+    user-select: none;
+    font-weight: 400;
+}
+body {
+    @extend %flexXalign-items-center;
+    flex-direction: column;
+    position: relative;
+}
+h3 {
+    font-size: 32px;
+    font-weight: 700;
+}
+span {
+    font-size: inherit;
+    font-weight: inherit;
+}
+i {
+    @extend %flexXalign-item-center;
+    cursor: pointer;
+}
