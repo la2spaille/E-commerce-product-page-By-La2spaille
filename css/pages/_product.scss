@@ -171,7 +171,7 @@
 }
 .product-description {
     padding: 30px 0 0;
-    color: $GrayishBlue;
+    color: $DarkGrayishBlue;
 }
 .w-product-priceXsolde {
     @extend %flexXalign-items-center;
@@ -197,7 +197,8 @@
     text-decoration: line-through;
 }
 .w-add-to-cart-inputXbtn {
-    @extend %flexXalign-items-center;
+    display: flex;
+    align-items: stretch;
     justify-content: space-between;
     padding: 20px 0 0;
     position: relative; 
@@ -205,34 +206,44 @@
 .w-add-to-cart-input {
     @extend %flexXalign-items-center;
     @extend %border-radius;
-    min-height: 100%;
-    padding: 15px 15px;
+    padding: 0 15px;
     justify-content: space-between;
     position: relative;
     background: $LightGrayishBlue;
-    svg {
-        fill: $Orange;
-    }
     div {
         @extend %flexXalign-items-center;
     }
+}
+#minus,#plus {
+    @extend %flexXalign-items-center;
+    justify-content: center;
+    height: 100%;
+    width: 25px;
+    cursor: pointer;
+}
+#minus {
+    &:hover {
+        i {
+            color: rgba($Orange, 0.7);
+        } 
+    }
     i {
-        svg{fill: $Black;}
-        &:hover {
-            color: $Orange;
-            svg {
-                fill: $Orange;
-            }
-        }
+        color: $Orange;
+        font-weight: 900;
+        font-size: 32px; 
+        transform: translateY(-3px);
     }
 }
-.minus {
-    @extend %flexXalign-items-center;
-    color: $Black;
-    font-weight: 900;
-    font-size: 32px;
-    line-height: 100%;
+#plus {
+    &:hover {
+        svg {
+            fill: rgba($Orange, 0.7);;
+        }
+    } 
+    svg{fill: $Orange;}
 }
 #AddPanierMulti {
     margin: 0 30px ;
+    font-weight: 900;
+
 }

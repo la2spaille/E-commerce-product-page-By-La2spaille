@@ -97,11 +97,11 @@ header {
     padding: 20px 0 30px;
     position: absolute;
     left: 0;
-    top: 50px;
+    top: 65px;
     z-index: 3;
     background: $White;
     transform: translateX(calc(-50% + 10px));
-    box-shadow:  10px 10px 10px $VeryVarkBlue, -10px 10px 10px $VeryVarkBlue;
+    box-shadow:  0 10px 20px -10px $GrayishBlue, 10px 0 20px -10px $GrayishBlue, -10px 0 20px -10px $GrayishBlue,;
     opacity: 0;
     overflow: hidden;
     visibility: hidden;
@@ -115,8 +115,13 @@ header {
         font-size: 16px;
     }
     button {
+        height: 50px;
         width: calc(100% - 40px);
         margin: 20px 20px 0;
+        box-shadow: none; 
+        &:hover {
+            opacity: 1;
+        }
     }
 }
 .w-mini-cart-sumaryXbtn {
@@ -135,6 +140,8 @@ header {
     background: white;
     opacity: 1;
     visibility: hidden;
+    font-weight: 700;
+    color: $DarkGrayishBlue;
     &.true {
         visibility: visible;
     }

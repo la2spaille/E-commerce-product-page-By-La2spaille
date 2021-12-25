@@ -6,13 +6,12 @@ button {
     padding: 15px 0;
     background: $Orange;
     color: $White;
-    line-height: 0;
+    line-height: 1;
     flex: 1;
     cursor: pointer;
-    // box-shadow: 0 10px 10px $White;
+    box-shadow: 0 25px 25px 0 $PaleOrange;
     &:hover {
         opacity: .5;
-        box-shadow: 0 25px 50px $PaleOrange;
     }
     svg {
         padding: 0 10px 0 0;

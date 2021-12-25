@@ -11,8 +11,8 @@ const previous_s = document.querySelectorAll('#i-previous')
 const allThumbnail = Array.from(document.querySelectorAll('.w-thumbnail-primary'))
 const allThumbnailLightbox = Array.from(document.querySelectorAll('.w-thumbnail-lightbox'))
 const miniCartClose = Array.from(document.querySelectorAll('.mini-cart-close'))
-const addPanierMinus = document.querySelector("#i-minus")
-const addPanierPlus = document.querySelector("#i-plus")
+const addtoCartMinus = document.querySelector("#minus")
+const addtoCartPlus = document.querySelector("#plus")
 const miniCartEmpty = document.querySelector(".w-mini-cart--is-empty")
 const basket = document.querySelector(".w-basket")
 const miniCart = document.querySelector(".w-mini-cart")
@@ -119,13 +119,13 @@ previous_s.forEach(previous => {
 
 // Add To Cart Input
 addPanierMulti.textContent = 0
-addPanierMinus.addEventListener('click', (e) =>{ 
+addtoCartMinus.addEventListener('click', (e) =>{ 
     if (addPanierMulti.textContent >= 1) {
         addPanierMulti.textContent = addPanierMulti.textContent - 1
     }
     e.stopPropagation()
 })
-addPanierPlus.addEventListener('click', (e) =>{ 
+addtoCartPlus.addEventListener('click', (e) =>{ 
     addPanierMulti.textContent = addPanierMulti.textContent - -1
     e.stopPropagation()
 })
