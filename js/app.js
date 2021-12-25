@@ -160,11 +160,13 @@ basket.addEventListener('click', (e) => {
 
 document.addEventListener('click', (e) => {
     miniCart.classList.remove("is-active")
+    miniCartEmpty.classList.remove("true")
     e.stopPropagation()
 })
 miniCartClose.forEach(close => {
     close.addEventListener('click', (e) => {
          miniCart.classList.remove("is-active")
+        miniCartEmpty.classList.remove("true")
         e.stopPropagation()
     })
 })
