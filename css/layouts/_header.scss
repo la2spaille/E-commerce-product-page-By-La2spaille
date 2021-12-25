@@ -1,5 +1,5 @@
 header {
-    @extend %flexXalign-item-center;
+    @extend %flexXalign-items-center;
     justify-content: space-between;
     height: 110px;
     width: 100%;
@@ -28,14 +28,14 @@ header {
         display: flex;
         height: 100%;
         a {
-            @extend %flexXalign-item-center;
+            @extend %flexXalign-items-center;
             height: 100%;
             padding: 0 15px;
             &:first-child {
                 margin: 0 0 0 -15px;
             }
             span {
-                @extend %flexXalign-item-center;
+                @extend %flexXalign-items-center;
                 height: 100%;
                 position: relative;
                 font-weight: 400;
@@ -62,13 +62,13 @@ header {
     display: none;
 }
 .w-basketXaccount {
-    @extend %flexXalign-item-center;
+    @extend %flexXalign-items-center;
     justify-content: space-between;
     padding: 0 170px 0 0;
     position: relative;
 }
 .w-basket,.w-account,#i-menu {
-    @extend %flexXalign-item-center;
+    @extend %flexXalign-items-center;
     justify-content: center;
 }
 .w-basket {
@@ -101,7 +101,7 @@ header {
     z-index: 3;
     background: $White;
     transform: translateX(calc(-50% + 10px));
-    box-shadow:  10px 10px 10px $LightGrayishBlue, -10px 10px 10px $LightGrayishBlue;
+    box-shadow:  10px 10px 10px $VeryVarkBlue, -10px 10px 10px $VeryVarkBlue;
     opacity: 0;
     overflow: hidden;
     visibility: hidden;
@@ -123,7 +123,7 @@ header {
     position: relative;
 }
 .w-mini-cart--is-empty {
-    @extend %flexXalign-item-center;
+    @extend %flexXalign-items-center;
     justify-content: center;
     height: 100%;
     width: 100%;
@@ -144,7 +144,7 @@ header {
     }
 }
 .w-mini-cart-product-sumary {
-    @extend %flexXalign-item-center;
+    @extend %flexXalign-items-center;
     height: 50px;
     padding:  20px 20px 0;
     flex: 1;

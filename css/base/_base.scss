@@ -27,6 +27,6 @@ span {
     font-weight: inherit;
 }
 i {
-    @extend %flexXalign-item-center;
+    @extend %flexXalign-items-center;
     cursor: pointer;
 }

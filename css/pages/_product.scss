@@ -1,5 +1,5 @@
 #l-lightbox {
-    @extend %flexXalign-item-center;
+    @extend %flexXalign-items-center;
     flex-direction: column;
     justify-content: center;
     height: calc(100% - 180px);
@@ -174,7 +174,7 @@
     color: $GrayishBlue;
 }
 .w-product-priceXsolde {
-    @extend %flexXalign-item-center;
+    @extend %flexXalign-items-center;
     width: 0%;
     justify-content: space-between;
     padding: 15px 0 0;
@@ -197,13 +197,13 @@
     text-decoration: line-through;
 }
 .w-add-to-cart-inputXbtn {
-    @extend %flexXalign-item-center;
+    @extend %flexXalign-items-center;
     justify-content: space-between;
     padding: 20px 0 0;
     position: relative; 
 }
 .w-add-to-cart-input {
-    @extend %flexXalign-item-center;
+    @extend %flexXalign-items-center;
     @extend %border-radius;
     min-height: 100%;
     padding: 15px 15px;
@@ -214,7 +214,7 @@
         fill: $Orange;
     }
     div {
-        @extend %flexXalign-item-center;
+        @extend %flexXalign-items-center;
     }
     i {
         svg{fill: $Black;}
@@ -227,7 +227,7 @@
     }
 }
 .minus {
-    @extend %flexXalign-item-center;
+    @extend %flexXalign-items-center;
     color: $Black;
     font-weight: 900;
     font-size: 32px;
