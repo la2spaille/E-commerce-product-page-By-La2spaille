@@ -313,11 +313,15 @@ header::after {
   left: 0;
   z-index: 2;
   background: white;
-  visibility: visible;
   opacity: 1;
+  visibility: hidden;
 }
 
-.w-mini-cart--is-empty.is-active {
+.w-mini-cart--is-empty.true {
+  visibility: visible;
+}
+
+.w-mini-cart--is-empty.is-no-empty {
   visibility: hidden;
   opacity: 0;
 }

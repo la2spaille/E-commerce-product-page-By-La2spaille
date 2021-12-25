@@ -133,7 +133,8 @@ addPanierPlus.addEventListener('click', (e) =>{
 // Mini Cart products
 addToCart.addEventListener('click', (e) => {
     if(addPanierMulti.textContent != 0) {
-        miniCartEmpty.classList.add('is-active')
+        miniCartEmpty.classList.add('is-no-empty')
+        miniCartEmpty.classList.remove("true")
         pill.classList.add('is-active')
     }
     qte.textContent = qte.textContent - - addPanierMulti.textContent
@@ -142,7 +143,7 @@ addToCart.addEventListener('click', (e) => {
     e.stopPropagation()
 })
 del.addEventListener('click', (e) => {
-    miniCartEmpty.classList.remove('is-active')
+    miniCartEmpty.classList.remove('is-no-empty')
     pill.classList.remove('is-active')
     qte.textContent = 0
     pill.textContent = qte.textContent
@@ -153,6 +154,7 @@ del.addEventListener('click', (e) => {
 // Mini Cart Apparition
 basket.addEventListener('click', (e) => {
     miniCart.classList.add("is-active")
+    miniCartEmpty.classList.add("true")
     e.stopPropagation()
 })
 

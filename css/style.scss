@@ -32,7 +32,6 @@ body {
     flex-direction: column;
     position: relative;
     align-items: center;
-    
 }
 h3 {
     font-size: 32px;
@@ -228,10 +227,13 @@ header {
     left: 0;
     z-index: 2;
     background: white;
-    visibility: visible;
     opacity: 1;
-    &.is-active {
-        visibility: hidden ;
+    visibility: hidden;
+    &.true {
+        visibility: visible;
+    }
+    &.is-no-empty {
+        visibility: hidden;
         opacity: 0;
     }
 }
@@ -294,7 +296,6 @@ header {
 }
 #i-menu {
     display: none;
-
 }
 #l-lightbox {
     position: absolute;
