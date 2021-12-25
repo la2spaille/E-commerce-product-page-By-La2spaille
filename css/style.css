@@ -195,11 +195,7 @@ header::after {
   background: #ff7d1a;
 }
 
-.w-header-nav--fake {
-  display: none;
-}
-
-#i-header-nav-close {
+.w-header-nav--fake, #i-header-nav-close {
   display: none;
 }
 
