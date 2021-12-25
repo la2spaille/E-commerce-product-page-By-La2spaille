@@ -51,7 +51,7 @@ button {
   line-height: 1;
   flex: 1;
   cursor: pointer;
-  box-shadow: 0 25px 25px 0 #ffede0;
+  box-shadow: 0 20px 25px 0 #ffede0;
 }
 
 button:hover {
@@ -540,6 +540,7 @@ header::after {
 }
 
 .w-add-to-cart-input {
+  min-width: 130px;
   padding: 0 15px;
   justify-content: space-between;
   position: relative;

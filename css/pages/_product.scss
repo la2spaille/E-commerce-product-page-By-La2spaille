@@ -206,6 +206,7 @@
 .w-add-to-cart-input {
     @extend %flexXalign-items-center;
     @extend %border-radius;
+    min-width: 130px;
     padding: 0 15px;
     justify-content: space-between;
     position: relative;
