@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/la2spaille/E-commerce-product-page-By-La2spaille)
-- Live Site URL: [Add live site URL here](https://vercel.com/la2spaille/e-commerce-product-page-by-la2spaille)
+- Solution URL: [Solution](https://github.com/la2spaille/E-commerce-product-page-By-La2spaille)
+- Live Site URL: [Live Site](https://vercel.com/la2spaille/e-commerce-product-page-by-la2spaille)
 
 ## My process
 
