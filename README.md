@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution](https://github.com/la2spaille/E-commerce-product-page-By-La2spaille)
-- Live Site URL: [Live Site](https://vercel.com/la2spaille/e-commerce-product-page-by-la2spaille)
+- Live Site URL: [Live Site](https://e-commerce-product-page-by-la2spaille.vercel.app/)
 
 ## My process
 
