@@ -1,4 +1,4 @@
-body, i, button, header, .w-header-nav nav a, .w-header-nav nav a span, .w-basketXaccount, .w-basket, .w-account, #i-menu, .w-mini-cart--is-empty, .w-mini-cart-product-sumary, #l-lightbox, .w-product-priceXsolde, .w-add-to-cart-input, .w-add-to-cart-input div, #minus, #plus {
+i, button, header, .w-header-nav nav a, .w-header-nav nav a span, .w-basketXaccount, .w-basket, .w-account, #i-menu, .w-mini-cart--is-empty, .w-mini-cart-product-sumary, #l-lightbox, .w-product-priceXsolde, .w-add-to-cart-input, .w-add-to-cart-input div, #minus, #plus {
   display: flex;
   align-items: center;
 }
@@ -24,7 +24,6 @@ button, #basket-pill, .w-mini-cart, .w-img-grid.w-img-grid-lightbox .w-thumbnail
 }
 
 body {
-  flex-direction: column;
   position: relative;
 }
 
@@ -576,6 +575,22 @@ header::after {
 #AddPanierMulti {
   margin: 0 30px;
   font-weight: 900;
+}
+
+@media (max-width: 1200px) {
+  header::after {
+    width: calc(100% - 200px);
+    left: 100px;
+  }
+  .l-product-wrapper {
+    padding: 0 100px;
+  }
+  .w-logo {
+    padding: 0 0 0 100px;
+  }
+  .w-basketXaccount {
+    padding: 0 100px 0 0;
+  }
 }
 
 @media (max-width: 970px) {

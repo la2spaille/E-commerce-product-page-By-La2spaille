@@ -5,6 +5,24 @@
 @import "./layouts/header";
 @import "./layouts/section";
 @import "./pages/product";
+@media (max-width : 1200px) {
+    header {
+        &::after {
+            width: calc(100% - 200px);
+            left: 100px;
+        }
+    }
+    .l-product-wrapper {
+        padding: 0 100px;
+    }
+    .w-logo {
+        padding: 0 0 0 100px;
+    }
+    .w-basketXaccount {
+        padding: 0 100px 0 0;
+    }
+    
+}
 @media (max-width: 970px) {
     header {
         height: 80px;
