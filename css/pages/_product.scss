@@ -164,19 +164,21 @@
     padding: 30px 10px 0 70px;
     strong {
         color: $Orange;
-    }
+        font-size: 12px;
+        font-weight: 700;
+}
 }
 .product-tilte {
     padding: 15px 0 0;
+    font-size: 40px;
 }
 .product-description {
     padding: 30px 0 0;
     color: $DarkGrayishBlue;
+    line-height: 1.7
 }
 .w-product-priceXsolde {
     @extend %flexXalign-items-center;
-    width: 0%;
-    justify-content: space-between;
     padding: 15px 0 0;
 }
 .w-product-price {

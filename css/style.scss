@@ -164,6 +164,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 15px 0 0;
+    }
+    .w-product-priceXsolde {
+        padding: 0;
     }
     .w-add-to-cart-inputXbtn{
         flex-direction: column;
