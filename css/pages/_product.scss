@@ -161,11 +161,12 @@
     
 }
 .w-product-info {
-    padding: 30px 10px 0 70px;
+    padding: 40px 10px 0 70px;
     strong {
         color: $Orange;
         font-size: 12px;
         font-weight: 700;
+        word-spacing: -1;
 }
 }
 .product-tilte {
@@ -179,12 +180,12 @@
 }
 .w-product-priceXsolde {
     @extend %flexXalign-items-center;
-    padding: 15px 0 0;
+    padding: 35px 0 0;
 }
 .w-product-price {
     padding: 5px 0;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 32px;
 }
 .w-product-solde {
     margin: 0 10px;
@@ -202,7 +203,7 @@
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-    padding: 20px 0 0;
+    padding: 35px 0 0;
     position: relative; 
 }
 .w-add-to-cart-input {
