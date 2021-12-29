@@ -1,4 +1,4 @@
-const imgPrimary = document.querySelector('#img-primary')
+const imgPrimary = document.querySelector('#w-primary-img')
 const imgPrymarylightbox = document.querySelector('#img-primary-lightbox')
 const lightbox = document.querySelector('#l-lightbox')
 const lightboxClose = document.querySelector('#i-lightbox-close')
@@ -17,6 +17,8 @@ const miniCartEmpty = document.querySelector(".w-mini-cart--is-empty")
 const basket = document.querySelector(".w-basket")
 const miniCart = document.querySelector(".w-mini-cart")
 const addToCart = document.querySelector("#btn-add-to-cart")
+const imgPrimaryWrapper = document.getElementById('img-primary-wrapper')
+const imgPrimaryLightboxWrapper = document.getElementById('img-primary-lightbox-wrapper')
 var addPanierMulti = document.querySelector("#AddPanierMulti") 
 
 // Var
@@ -26,11 +28,13 @@ var pill = document.querySelector('#basket-pill')
 var pt  = document.querySelector("#mini-cart-product-pt") 
 var del = document.querySelector(".w-mini-cart-product-delete")
 var attribution
-
+var position
+var diff
 // Initialisation
 qte.textContent = 0
 attribution = 0
-
+position = 0
+diff = (position - attribution)*100
 // Function 
 function ImageAttribution() {
     allThumbnail.forEach(thumbnail => {
@@ -41,24 +45,12 @@ function ImageAttribution() {
     })
     allThumbnail[attribution].classList.add("is-active")
     allThumbnailLightbox[attribution].classList.add("is-active")
-    if (attribution==0) {
-        imgPrimary.src="images/image-product-1.jpg"
-        imgPrymarylightbox.src="images/image-product-1.jpg"
-    }
-    if (attribution==1) {
-        imgPrimary.src="images/image-product-2.jpg"
-        imgPrymarylightbox.src="images/image-product-2.jpg"
-    }
-    if (attribution==2) {
-        imgPrimary.src="images/image-product-3.jpg"
-        imgPrymarylightbox.src="images/image-product-3.jpg"
-    }
-    if (attribution==3) {
-        imgPrimary.src="images/image-product-4.jpg"
-        imgPrymarylightbox.src="images/image-product-4.jpg"
-    }
-}
+    diff = (position - attribution)*100 + diff
+    imgPrimaryWrapper.style.transform='translateX('+diff+'%)'
+    imgPrimaryLightboxWrapper.style.transform='translateX('+diff+'%)'
+    position = attribution
 
+}
 // Mobile Navigation Apparition
 menuBtn.addEventListener('click', (e) => {
     headerNav.classList.add('is-active')
