@@ -739,7 +739,7 @@ header::after {
     right: 10%;
     transform: translateX(50%);
   }
-  #primary-img {
+  #w-primary-img {
     border-radius: 0;
   }
   .w-thumbnail {
