@@ -10,7 +10,6 @@ const next_s = document.querySelectorAll('.i-next')
 const previous_s = document.querySelectorAll('.i-previous')
 const allThumbnail = Array.from(document.querySelectorAll('.w-thumbnail-primary'))
 const allThumbnailLightbox = Array.from(document.querySelectorAll('.w-thumbnail-lightbox'))
-const miniCartClose = Array.from(document.querySelectorAll('.mini-cart-close'))
 const addtoCartMinus = document.querySelector("#minus")
 const addtoCartPlus = document.querySelector("#plus")
 const miniCartEmpty = document.querySelector(".w-mini-cart--is-empty")
@@ -147,18 +146,13 @@ del.addEventListener('click', (e) => {
 basket.addEventListener('click', (e) => {
     miniCart.classList.add("is-active")
     miniCartEmpty.classList.add("true")
-    e.stopPropagation()
-})
-
-document.addEventListener('click', (e) => {
-    miniCart.classList.remove("is-active")
-    miniCartEmpty.classList.remove("true")
-    e.stopPropagation()
-})
-miniCartClose.forEach(close => {
-    close.addEventListener('click', (e) => {
-         miniCart.classList.remove("is-active")
-        miniCartEmpty.classList.remove("true")
-        e.stopPropagation()
+    window.addEventListener('click', (wE) => {
+        let taarget = document.querySelector('.taarget')
+            if (wE.target != taarget) {
+                miniCart.classList.remove("is-active")
+                miniCartEmpty.classList.remove("true")
+            }
+    
     })
+    e.stopPropagation()
 })
