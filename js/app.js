@@ -48,7 +48,6 @@ function ImageAttribution() {
     imgPrimaryWrapper.style.transform='translateX('+diff+'%)'
     imgPrimaryLightboxWrapper.style.transform='translateX('+diff+'%)'
     position = attribution
-
 }
 // Mobile Navigation Apparition
 menuBtn.addEventListener('click', (e) => {
@@ -143,16 +142,26 @@ del.addEventListener('click', (e) => {
 })
 
 // Mini Cart Apparition
+let miniCartOpen = false
 basket.addEventListener('click', (e) => {
+    e.stopPropagation()
+    e.preventDefault()
     miniCart.classList.add("is-active")
     miniCartEmpty.classList.add("true")
-    window.addEventListener('click', (wE) => {
-        let taarget = document.querySelector('.taarget')
-            if (wE.target != taarget) {
-                miniCart.classList.remove("is-active")
-                miniCartEmpty.classList.remove("true")
-            }
+    miniCartOpen = true
+    // window.addEventListener('click', (wE) => {
+    //     let taarget = document.querySelector('.taarget')
+    //         if (wE.target != taarget) {
+    //             miniCart.classList.remove("is-active")
+    //             miniCartEmpty.classList.remove("true")
+    //         }
     
-    })
-    e.stopPropagation()
+    // })
+    
 })
+document.querySelector('section').addEventListener('click' , ()=> {
+    if(miniCartOpen) {
+        miniCart.classList.remove("is-active")
+        miniCartOpen = false
+    }
+} )
